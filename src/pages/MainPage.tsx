@@ -1,6 +1,11 @@
 import { Header } from '../components/Header'
 import bgImage from '../assets/MainPageBg.jpg'
 import { CardForLand } from '../components/MainPageComponents/CardForLand'
+import AnimalCard from '../components/AnimalCard'
+import dog1 from '../assets/dog1.jpg'
+import dog2 from '../assets/dog2.jpg'
+import cat1 from '../assets/cat1.jpg'
+import cat2 from '../assets/cat2.jpg'
 
 const landingCarObject = [
   {
@@ -17,6 +22,41 @@ const landingCarObject = [
     number: 3,
     title: 'Приюты',
     description: 'Обратиться в приюты для оказания помощи питомцам',
+  },
+]
+
+const animalCardObject = [
+  {
+    name: 'Шарик',
+    photo: dog1,
+    age: '6 лет',
+    description:
+      'Очень веселый и озорный пес, любит веселиться и играть, ему нужна твоя помощь, чтобы обрести дом',
+    gender: 'male',
+  },
+  {
+    name: 'Бобик',
+    photo: dog2,
+    age: '2 года',
+    description:
+      'Очень веселый и озорный пес, любит веселиться и играть, ему нужна твоя помощь, чтобы обрести дом',
+    gender: 'male',
+  },
+  {
+    name: 'Влада',
+    photo: cat1,
+    age: '4 месяца',
+    description:
+      'Очень веселый и озорный пес, любит веселиться и играть, ему нужна твоя помощь, чтобы обрести дом',
+    gender: 'female',
+  },
+  {
+    name: 'Милка',
+    photo: cat2,
+    age: '6 лет',
+    description:
+      'Очень веселый и озорный пес, любит веселиться и играть, ему нужна твоя помощь, чтобы обрести дом',
+    gender: 'female',
   },
 ]
 
@@ -51,7 +91,23 @@ export function MainPage() {
           ))}
         </div>
       </div>
-      <div className="w-[100vw] bg-[#D0EDFF] h-[600px]"></div>
+      <div className="w-[100vw] bg-[#D0EDFF] h-[600px]">
+        <div className="font-[Bryndan_Write] text-[36px] text-[#4D4D4D] pl-[20px] pt-[20px]">
+          Они нуждаются в тоей помощи
+        </div>
+        <div className="flex flex-row w-full items-center justify-center gap-[47px] mt-[60px]">
+          {animalCardObject.map((item) => (
+            <AnimalCard
+              key={item.name}
+              name={item.name}
+              photo={item.photo}
+              age={item.age}
+              description={item.description}
+              gender={item.gender}
+            />
+          ))}
+        </div>
+      </div>
     </>
   )
 }
