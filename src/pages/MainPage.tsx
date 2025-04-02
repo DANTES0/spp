@@ -72,7 +72,7 @@ export function MainPage() {
         />
         <div
           style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
-          className="font-[Bryndan_Write] text-[48px] text-white absolute z-10 w-[400px] h-[300px] text-center top-[75px]"
+          className="font-[Bryndan_Write] text-[48px] text-white absolute z-10 w-[400px] h-[300px] text-center top-[75px] "
         >
           Животные нуждаются в твоей помощи
         </div>

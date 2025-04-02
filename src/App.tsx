@@ -1,12 +1,15 @@
 import './App.css'
 import { Header } from './components/Header'
-import { MainPage } from './pages/MainPage'
+import { RouterProvider } from 'react-router'
+
+import { router } from './routes'
 
 function App() {
   return (
     <>
       <Header />
-      <MainPage />
+      <RouterProvider router={router} />
+      {/* <MainPage /> */}
     </>
   )
 }
